@@ -32,4 +32,12 @@
     'demo': [
         'demo/demo.xml',
     ],
+    'assets': {
+        'web.assets_qweb': [
+            'demo_html/static/src/xml/iymmenu.xml'
+        ],
+        'web.assets_backend': [
+            'demo_html/static/src/scss/iymmenu.scss',
+        ]
+    }
 }

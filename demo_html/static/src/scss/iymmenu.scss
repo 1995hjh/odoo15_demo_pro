@@ -1,0 +1,29 @@
+$margin-sidebar: 140px;
+@mixin go-hover-style($background: #6f42c1) {
+  background: $background;
+}
+.o_action_manager {
+  margin-left: $margin-sidebar;
+}
+.i_yuan_man_menu {
+  position: fixed;
+  width: $margin-sidebar;
+  height: 100%;
+  margin-top: 46px;
+  background: #71639e;
+  .menu_list_view {
+    padding: 0;
+    .menu_list {
+      padding: 15px 0;
+      display: block;
+      text-align: center;
+      box-sizing: border-box;
+      color: #fff;
+      border-bottom: 1px solid #5a4f7f;
+      cursor: pointer;
+      &:hover {
+        @include go-hover-style(rgba(0, 0, 0, .08));
+      }
+    }
+  }
+}
