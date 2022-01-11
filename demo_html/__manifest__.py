@@ -34,10 +34,11 @@
     ],
     'assets': {
         'web.assets_qweb': [
-            'demo_html/static/src/xml/iymmenu.xml'
+            'demo_html/static/src/xml/iymmenu.xml',
         ],
         'web.assets_backend': [
             'demo_html/static/src/scss/iymmenu.scss',
+            'demo_html/static/src/js/iymmenu.js'
         ]
     }
 }
