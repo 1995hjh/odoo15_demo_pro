@@ -4,8 +4,9 @@ import Widget from "web.Widget";
 
 class IymMenu extends owl.Component {
     static  template = 'demo_html.IymMenuWidget'
-    onTogglerClick(index, ev) {
-        alert( $($(".dropdown-item-txt")[index]).text())
+
+    onTogglerClick(ev) {
+        alert(ev.target.outerText)
     }
 }
 SystrayMenu.Items.push(IymMenu)
