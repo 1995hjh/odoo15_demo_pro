@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+     <menuitem id="odoo_web_root"
+                  name="*导航页面"
+                  sequence="1"/>
+
+    <record id="action_demo_client_one" model="ir.actions.client">
+        <field name="name">标签一</field>
+        <field name="tag">iym_test_one</field>
+    </record>
+
+    <menuitem id="menu_client_tab_one"
+        name="标签一"
+        parent="odoo_web_root"
+        action="action_demo_client_one"
+        sequence="1"/>
+
+    <record id="action_demo_client_two" model="ir.actions.client">
+        <field name="name">刷新页面</field>
+        <field name="tag">iym_test_two</field>
+    </record>
+
+    <menuitem id="menu_client_tab_two"
+        name="刷新页面"
+        parent="odoo_web_root"
+        action="action_demo_client_two"
+        sequence="1"/>
+
+    <record id="action_demo_client_three" model="ir.actions.client">
+        <field name="name">退出登录</field>
+        <field name="tag">iym_test_three</field>
+    </record>
+
+    <menuitem id="menu_client_tab_three"
+        name="退出登录"
+        parent="odoo_web_root"
+        action="action_demo_client_three"
+        sequence="1"/>
+
+    <record id="action_demo_client_four" model="ir.actions.client">
+        <field name="name">加载用户界面</field>
+        <field name="tag">iym_test_four</field>
+    </record>
+
+    <menuitem id="menu_client_tab_four"
+        name="加载用户界面"
+        parent="odoo_web_root"
+        action="action_demo_client_four"
+        sequence="1"/>
+
+  </data>
+</odoo>
