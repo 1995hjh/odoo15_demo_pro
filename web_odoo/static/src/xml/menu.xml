@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="odoo_web.demo" owl="1">
+        <div class="dropdown">
+          <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
+              <i class="fa fa-camera-retro bi"></i>
+            Dropdown button
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#" t-on-click="onTogglerClick">
+                <i class="fa fa-hand-peace-o bi"></i>
+                <span class="dropdown-item-txt">Action</span>
+            </a>
+            <a class="dropdown-item" href="#" t-on-click="onTogglerClick">
+                <i class="fa fa-hand-pointer-o bi"></i>
+                <span class="dropdown-item-txt">Another action</span>
+            </a>
+            <a class="dropdown-item" href="#" t-on-click="onTogglerClick">
+                <i class="fa fa-handshake-o bi"></i>
+                <span class="dropdown-item-txt">Something else here</span>
+            </a>
+          </div>
+        </div>
+    </t>
+</templates>

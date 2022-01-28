@@ -33,7 +33,10 @@
     ],
     'assets': {
         'web.assets_backend': [
-            'web_odoo/static/src/js/iym_client.js'
+            'web_odoo/static/src/scss/menu.scss',
+            'web_odoo/static/src/js/iym_client.js',
+            'web_odoo/static/src/js/menu.js'
         ],
+        'web.assets_qweb': ['web_odoo/static/src/xml/*']
     }
 }
