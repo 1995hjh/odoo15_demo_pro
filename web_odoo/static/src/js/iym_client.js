@@ -49,7 +49,7 @@ const logoutClient = function (env, action) {
 registry.category('actions').add('iym_test_three', logoutClient)
 
 const loadUserClient = function (env, action) {
-    //退出登录
+    //用户界面
     env.services['action'].doAction({
         'type': 'ir.actions.act_window',
         'res_model': 'res.users',
