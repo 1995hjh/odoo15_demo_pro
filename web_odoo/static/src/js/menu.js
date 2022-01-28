@@ -9,6 +9,9 @@ class SystrayDemo extends Component {
     setup() {
         this.items = ['标签一','标签二','标签三','标签四']
     }
+    onTogglerClick(e) {
+        alert(e.target.innerText);
+    }
 }
 
 
