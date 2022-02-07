@@ -61,5 +61,16 @@
                   parent="odoo_web_root"
                   action="fnc_action_client"
                   sequence="100"/>
+
+
+        <!-- actions opening views on models -->
+        <record model="ir.actions.act_window" id="demo_action_window">
+            <field name="name">表单</field>
+            <field name="res_model">web_odoo.demo1</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- Top menu item -->
+        <menuitem name="*演示菜单" id="demo_menu_root" action="demo_action_window"/>
     </data>
 </odoo>
