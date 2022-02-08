@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>rpc演示</title>
+    <script type="text/javascript" src="/web_odoo/static/lib/rpc.js"></script>
+</head>
+<body>
+    <h3>hello, rpc</h3>
+</body>
+<script>
+    console.log('rpc: ', rpc);
+    rpc.setHost('', 'testodoo15-0');
+    rpc.login('testodoo15-0', 'admin', 'admin').then((session_info) => {
+        console.log('session_info: ', session_info);
+        rpc.call('web_odoo.demo1', 'action_server').then((data) => {
+            console.log('action_server: ', data)
+        })
+    })
+</script>
+</html>

@@ -33,6 +33,15 @@ class Demo(models.TransientModel):
         }
 
     @api.model
+    def action_server(self):
+        return {
+            'type': 'ir.actions.client',
+            'name': 'Demo Client',
+            'tag': "logout",
+            'params': {}
+        }
+
+    @api.model
     def error_action(self):
         '''
         抛错方法
