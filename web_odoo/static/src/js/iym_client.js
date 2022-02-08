@@ -133,13 +133,8 @@ registry.category('actions').add('iym_test_four', loadUserClient)
 
 
 const fncClient = async function (env, action) {
-    let result = env.services['orm'].call(
-        'web_odoo.demo1',
-        'notify'
-    ).then(() => {
-        env.services['action'].doAction(result)
-    })
-
+    let result = await env.services['orm'].call('web_odoo.demo1', 'notify');
+    env.services['action'].doAction(result)
 }
 registry.category('actions').add('FncClient', fncClient);
 
