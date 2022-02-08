@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>owl使用案例</title>
+    <script type="text/javascript" src="/web_odoo/static/lib/owl.js"></script>
+    <style>
+        .m20 {
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+
+</body>
+<script>
+    const {Component, mount, useState} = owl;
+    const {xml} = owl.tags;
+    const {useRef} = owl.hooks;
+
+    class Child extends Component {
+        static props = {
+            item: '',
+            name: ''
+        }
+        static template = xml`<div><t t-esc="props.name"></t>我是子组件<t t-esc="props.item"></t></div>`;
+
+        async willUpdateProps(nextProps) {
+            console.log('===', nextProps);
+        }
+    }
+
+    class App extends Component {
+
+        form = useState({
+            value: '',
+            count: 0,
+            name: ''
+        });
+
+        static components = { Child };
+
+        static template = xml`
+            <div t-ref="divContent">
+                <h1>hello world</h1>
+                <button t-on-click="btnClick" t-on-dblclick="btnDblclick" class="m20">按钮</button>
+                <input type="text" t-model="form.value" t-on-change="updateValue"/>
+                <div>
+                    <span class="m20">
+                        <t t-esc="form.count"></t>
+                    </span>
+                    <button t-on-click="addNum" class="m20">增加1</button>
+                </div>
+                <Child t-foreach="[1, 2, 3]" t-as="item" t-key="item" item="item" name="form.name"></Child>
+            </div>
+        `;
+        btnClick() {
+            console.log(2, useRef('divContent'));
+            console.log('输入框内容: ', this.form.value);
+        }
+        btnDblclick() {
+            alert('双击事件')
+        }
+        addNum() {
+            this.form.count++;
+        }
+        updateValue(e) {
+            this.form.name = this.form.value;
+        }
+    }
+    let app = new App();
+    app.mount(document.body);
+    //mount(App, {target: document.body});
+</script>
+</html>
