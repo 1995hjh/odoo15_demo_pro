@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="web_odoo.table" owl="1">
+        <table border="1" cellpadding="10" cellspacing="0" width="900" style="margin: 20px auto">
+            <thead>
+                <tr style="text-align: center">
+                    <td>id</td>
+                    <td>姓名</td>
+                    <td>年龄</td>
+                    <td>操作</td>
+                </tr>
+            </thead>
+            <tbody>
+                <t t-foreach="users" t-as="user">
+                    <tr style="text-align: center">
+                        <td t-esc="user.id"></td>
+                        <td t-esc="user.name"></td>
+                        <td t-esc="user.age"></td>
+                        <td>
+                            <button type="button" class="btn btn-primary" t-on-click="btnClick(user.id, user.name)">跳转form页按钮</button>
+                        </td>
+                    </tr>
+                </t>
+            </tbody>
+        </table>
+    </t>
+</templates>

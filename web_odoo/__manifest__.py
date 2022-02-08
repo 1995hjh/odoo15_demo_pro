@@ -26,6 +26,7 @@
     'data': [
         'security/ir.model.access.csv',
         'views/iym_client.xml',
+        'views/iym_table_menu.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
@@ -36,7 +37,8 @@
             'web_odoo/static/src/scss/menu.scss',
             'web_odoo/static/src/js/iym_client.js',
             'web_odoo/static/src/js/menu.js',
-            'web_odoo/static/src/js/error_dialog.js'
+            'web_odoo/static/src/js/error_dialog.js',
+            'web_odoo/static/src/js/iym_table.js',
         ],
         'web.assets_qweb': ['web_odoo/static/src/xml/*']
     }

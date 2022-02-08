@@ -42,8 +42,8 @@ class DemoClient extends Component {
             case 'create':
                 //create演示
                 this.orm.create("web_odoo.demo1", {
-                    name: "张" + Math.random().toFixed(2) * 400 + 100,
-                    'age': 22
+                    name: "张" + Math.floor(Math.random()*100),
+                    'age': Math.floor(Math.random()*100)
                 }).then((data) => {
                     console.log(data);
                     this.notification.add('create 演示', {type: "info"})

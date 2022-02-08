@@ -71,6 +71,7 @@
         </record>
 
         <!-- Top menu item -->
-        <menuitem name="*演示菜单" id="demo_menu_root" action="demo_action_window"/>
+        <menuitem name="*演示菜单" id="demo_menu_root" action="demo_action_window" sequence="1"/>
+
     </data>
 </odoo>

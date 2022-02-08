@@ -10,6 +10,7 @@ class Demo(models.TransientModel):
     _name = 'web_odoo.demo1'
     _description = 'first model test'
 
+    id = fields.Char(string='id')
     name = fields.Char(string='名称')
     age = fields.Integer(string="年龄")
 
